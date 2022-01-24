@@ -1,0 +1,56 @@
+<mat-card>
+
+    <h1>Your Profile details</h1>
+
+    <mat-card-content>
+
+        <div class="bootstrap-wrapper">
+
+            <div class="cotainer">
+
+                <div class="container text-center">
+                        <img src="../../assets/profile-logo.png" 
+                        class="profile-img"
+                        alt="">
+                        <h1 class="margintop20"> {{user.firstName}} {{user.lastName}}</h1>
+                </div>
+
+                
+                <div class="row">
+                    
+                    <div class="col-md-10 offset-md-1">
+
+                        <table fxFlex class="table text-center">
+                            <tr>
+                                <td>Username</td>
+                                <td>{{user.username}}</td>
+                            </tr>
+                            <tr>
+                                <td>id</td>
+                                <td>PARIKSHA{{user.id}}</td>
+                            </tr>
+                            <tr>
+                                <td>Phone</td>
+                                <td>{{user.phone}}</td>
+                            </tr>
+                            <tr>
+                                <td>Role</td>
+                                <td>{{user.authorities[0].authority}}</td>
+                            </tr>
+                            <tr>
+                                <td>Status</td>
+                                <td *ngIf="user.enabled">ACTIVE</td>
+                                <td *ngIf="!user.enabled">INACTIVE</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+
+    <mat-card-actions class="text-center">
+        <button mat-raised-button color="primary">UPDATE</button>
+        <button mat-raised-button color="accent">SHARE</button>
+      </mat-card-actions>
+</mat-card>

@@ -1,1 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+body{
+   margin: 0px;
+}
+.text-center{
+
+    text-align: center;
+}
+
+.success{
+    background-color: green;
+}
+
+.failure{
+   background-color:red;
+}
+
+
+.full-width{
+    width: 100%;
+}
+
+.margintop10{
+   margin-top:10px;
+}
+
+.marginbottom10{
+    margin-bottom:10px;
+ }
+
+ .marginleft10{
+    margin-left:10px;
+ }
+
+ .marginright10{
+    margin-right:10px;
+ }
+
+ .margintop20{
+    margin-top:20px;
+ }
+ 
+ .marginbottom20{
+     margin-bottom:20px;
+  }
+ 
+  .marginleft20{
+     margin-left:20px;
+  }
+ 
+  .marginright20{
+     margin-right:20px;
+  }

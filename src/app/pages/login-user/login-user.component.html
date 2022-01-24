@@ -1,0 +1,48 @@
+<div class="bootstrap-wrapper">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-6 offset-md-3 margintop20">
+                <mat-card class="marginbottom20">
+                    <div class="container text-center">
+                        <img width="300px" src="../../assets/logo.jpeg">
+                    </div>
+                    <h1 class="text-center">Login Here</h1>
+                    <form 
+                    #loginForm="ngForm"
+                    (ngSubmit)="onLoginFormSubmit()">
+                            <mat-form-field class="full-width" appearance="outline">
+                                <mat-label>User Name</mat-label>
+                                <input 
+                                [(ngModel)]="loginData.username"
+                                name="username"
+                                matInput 
+                                placeholder="Enter here"
+                                required
+                                >
+                              </mat-form-field>
+    
+                              <mat-form-field class="full-width" appearance="outline">
+                                <mat-label>User Password</mat-label>
+                                <input 
+                                 [(ngModel)]="loginData.password"
+                                 name="password"
+                                type="password" 
+                                matInput 
+                                placeholder="Enter here"
+                                required
+                                >
+                              </mat-form-field>
+    
+                          
+                              <div class="container text-center">
+                                  <button [disabled]="!loginForm.valid" type="submit" style="margin-right: 25px;" mat-raised-button color="primary">Login</button>
+                                  <button type="text" mat-raised-button >Reset</button>
+                              </div>
+                    </form>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>
